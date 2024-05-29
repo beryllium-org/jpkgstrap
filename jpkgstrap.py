@@ -130,13 +130,13 @@ if __name__ == "__main__":
                         chdir(ii)
                         exec(script)
                         chdir(olddir)
-                    shutil.copy(
+                    shutil.copyfile(
                         path.join(ii, "Manifest.json"),
                         path.join(
                             root, "etc/jpkg/installed", datai["package_name"] + ".json"
                         ),
                     )
-                    shutil.copy(
+                    shutil.copyfile(
                         path.join(ii, datai["remove"]),
                         path.join(
                             root, "etc/jpkg/uninstallers", datai["package_name"] + ".py"
